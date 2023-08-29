@@ -107,7 +107,7 @@ namespace ConsoleApp1
             {
                 while (encInputParse == false) //Makes sure that as long as you enter characters that are not decimals you will be asked this question again
                 {
-                    Console.WriteLine("Which item do you want to search for? \n0 - Super Potion, 1 - Full Heal, 2 - Ultra Ball, 3 - Rare Candy, 4 - Full Restore, 5 - Revive, 6 - Nugget, 7 - Protein, 8 - PP Up, 9 - King's Rock"); //Self-Explanatory
+                    Console.WriteLine("Which item do you want to search for? \n0 - Super Potion, 1 - Full Heal, 2 - Ultra Ball, 3 - Rare Candy, 4 - Full Restore, 5 - Revive, 6 - Nugget, 7 - Protein, 8 - PP Up, 9 - King's Rock, 10 - All"); //Self-Explanatory
                     encounterRate = Console.ReadLine(); //Gets encounter rate
                     encInputParse = int.TryParse(encounterRate, out parseAttempt); //Attempts to parse the input, setting repeatInputParse to true if it succeeds
                     if (encInputParse == false)
@@ -283,9 +283,56 @@ namespace ConsoleApp1
                         {
                             string hexDigits = hexResult.Substring(0, 4);
                             int encounterVar = Int32.Parse(hexDigits, NumberStyles.HexNumber);
+                            string nextHex = (BaseNumOne * firstCalc + BaseNumTwo).ToString("X8");
+                            int itemVar = Int32.Parse(nextHex.Substring(0, 4), NumberStyles.HexNumber);
+                            string itemGenerated;
+                            if (itemVar % 100 <= 29)
+                            {
+                                itemGenerated = "Super Potion";
+                            }
+                            else if (itemVar % 100 <= 39)
+                            {
+                                itemGenerated = "Full Heal";
+                            }
+                            else if (itemVar % 100 <= 49)
+                            {
+                                itemGenerated = "Ultra Ball";
+                            }
+                            else if (itemVar % 100 <= 59)
+                            {
+                                itemGenerated = "Rare Candy";
+                            }
+                            else if (itemVar % 100 <= 69)
+                            {
+                                itemGenerated = "Full Restore";
+                            }
+                            else if (itemVar % 100 <= 79)
+                            {
+                                itemGenerated = "Revive";
+                            }
+                            else if (itemVar % 100 <= 89)
+                            {
+                                itemGenerated = "Nugget";
+                            }
+                            else if (itemVar % 100 <= 94)
+                            {
+                                itemGenerated = "Protein";
+                            }
+                            else if (itemVar % 100 <= 98)
+                            {
+                                itemGenerated = "PP Up";
+                            }
+                            else if (itemVar % 100 <= 99)
+                            {
+                                itemGenerated = "King's Rock";
+                            }
+                            else
+                            {
+                                itemGenerated = "Invalid";
+                            }
                             if (encounterVar % 10 == 0)
                             {
-                                Console.WriteLine(repeated + ": 0x" + hexResult); //Prints the hex value of firstCalc
+                                Console.WriteLine(repeated + ": 0x" + hexResult + " Item: " + itemGenerated); //Prints the hex value of firstCalc
                                 if (save)
                                 {
                                     File.AppendAllText(rngInitSeed + "data-encounters.txt", repeated + ": 0x" + hexResult + "\n");
