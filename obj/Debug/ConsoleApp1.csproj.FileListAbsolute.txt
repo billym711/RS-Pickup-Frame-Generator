@@ -12,3 +12,10 @@ C:\Users\Billy\Downloads\fire-red-rng-calculator-0.1.2-alpha\fire-red-rng-calcul
 C:\Users\Billy\Downloads\fire-red-rng-calculator-0.1.2-alpha\fire-red-rng-calculator-0.1.2-alpha\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
 C:\Users\Billy\Downloads\fire-red-rng-calculator-0.1.2-alpha\fire-red-rng-calculator-0.1.2-alpha\ConsoleApp1\bin\Debug\ConsoleApp1.exe
 C:\Users\Billy\Downloads\fire-red-rng-calculator-0.1.2-alpha\fire-red-rng-calculator-0.1.2-alpha\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\bmoor\Documents\GitHub\RS-Pickup-Frame-Generator\bin\Debug\ConsoleApp1.exe.config
+C:\Users\bmoor\Documents\GitHub\RS-Pickup-Frame-Generator\bin\Debug\ConsoleApp1.exe
+C:\Users\bmoor\Documents\GitHub\RS-Pickup-Frame-Generator\bin\Debug\ConsoleApp1.pdb
+C:\Users\bmoor\Documents\GitHub\RS-Pickup-Frame-Generator\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+C:\Users\bmoor\Documents\GitHub\RS-Pickup-Frame-Generator\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\bmoor\Documents\GitHub\RS-Pickup-Frame-Generator\obj\Debug\ConsoleApp1.exe
+C:\Users\bmoor\Documents\GitHub\RS-Pickup-Frame-Generator\obj\Debug\ConsoleApp1.pdb

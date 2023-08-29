@@ -75,7 +75,7 @@ namespace ConsoleApp1
                 }
             }
 
-            Console.WriteLine("Would you like to search for only frames that produce an encounter? (Ruby/Sapphire only)"); //Self-Explanatory
+            Console.WriteLine("Would you like to search for only frames that pickup an item?"); //Self-Explanatory
             encounterAsk = Console.ReadLine(); //Gets answer for encounter question
             if (encounterAsk.IndexOf("y", 0, 1) == 0 || encounterAsk.IndexOf("Y", 0, 1) == 0) //Checks if the first character of encounterAsk is "y" or "Y" and sets encounterSearch to true if it is
             {
@@ -107,7 +107,7 @@ namespace ConsoleApp1
             {
                 while (encInputParse == false) //Makes sure that as long as you enter characters that are not decimals you will be asked this question again
                 {
-                    Console.WriteLine("Enter the encounter rate: "); //Self-Explanatory
+                    Console.WriteLine("Which item do you want to search for? \n0 - Super Potion, 1 - Full Heal, 2 - Ultra Ball, 3 - Rare Candy, 4 - Full Restore, 5 - Revive, 6 - Nugget, 7 - Protein, 8 - PP Up, 9 - King's Rock"); //Self-Explanatory
                     encounterRate = Console.ReadLine(); //Gets encounter rate
                     encInputParse = int.TryParse(encounterRate, out parseAttempt); //Attempts to parse the input, setting repeatInputParse to true if it succeeds
                     if (encInputParse == false)
@@ -218,8 +218,7 @@ namespace ConsoleApp1
                     {
                         string hexDigits = hexResult.Substring(0, 4); //Makes a string that is the first 4 characters of hexResult
                         int encounterVar = Int32.Parse(hexDigits, NumberStyles.HexNumber); //Sets an integer equal to the parsed value of hexDigits
-                        encounterCalc = encounterVar % 2880; //Sets an integer equal to encounterVar mod 2880
-                        if (encounterCalc < 16 * Int32.Parse(encounterRate)) //Checks if encounterCalc is less than 320 and prints result if so
+                        if (encounterVar % 10 == 0) //Checks if encounterCalc is less than 320 and prints result if so
                         {
                             Console.WriteLine("1: 0x" + hexResult); //Prints the hex value of firstCalc
                             if (save)
@@ -284,8 +283,7 @@ namespace ConsoleApp1
                         {
                             string hexDigits = hexResult.Substring(0, 4);
                             int encounterVar = Int32.Parse(hexDigits, NumberStyles.HexNumber);
-                            encounterCalc = encounterVar % 2880;
-                            if (encounterCalc < 16 * Int32.Parse(encounterRate))
+                            if (encounterVar % 10 == 0)
                             {
                                 Console.WriteLine(repeated + ": 0x" + hexResult); //Prints the hex value of firstCalc
                                 if (save)
