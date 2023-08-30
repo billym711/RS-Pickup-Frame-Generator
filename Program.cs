@@ -332,7 +332,80 @@ namespace ConsoleApp1
                             }
                             if (encounterVar % 10 == 0)
                             {
-                                Console.WriteLine(repeated + ": 0x" + hexResult + " Item: " + itemGenerated); //Prints the hex value of firstCalc
+                                if (Int32.Parse(encounterRate) == 10)
+                                {
+                                    Console.WriteLine(repeated + ": 0x" + hexResult + " Item: " + itemGenerated); //Prints the hex value of firstCalc
+                                }
+                                if (Int32.Parse(encounterRate) == 9)
+                                {
+                                    if (itemGenerated == "King's Rock")
+                                    {
+                                        Console.WriteLine(repeated + ": 0x" + hexResult + " Item: " + itemGenerated); //Prints the hex value of firstCalc
+                                    }
+                                }
+                                if (Int32.Parse(encounterRate) == 8)
+                                {
+                                    if (itemGenerated == "PP Up")
+                                    {
+                                        Console.WriteLine(repeated + ": 0x" + hexResult + " Item: " + itemGenerated); //Prints the hex value of firstCalc
+                                    }
+                                }
+                                if (Int32.Parse(encounterRate) == 7)
+                                {
+                                    if (itemGenerated == "Protein")
+                                    {
+                                        Console.WriteLine(repeated + ": 0x" + hexResult + " Item: " + itemGenerated); //Prints the hex value of firstCalc
+                                    }
+                                }
+                                if (Int32.Parse(encounterRate) == 6)
+                                {
+                                    if (itemGenerated == "Nugget")
+                                    {
+                                        Console.WriteLine(repeated + ": 0x" + hexResult + " Item: " + itemGenerated); //Prints the hex value of firstCalc
+                                    }
+                                }
+                                if (Int32.Parse(encounterRate) == 5)
+                                {
+                                    if (itemGenerated == "Revive")
+                                    {
+                                        Console.WriteLine(repeated + ": 0x" + hexResult + " Item: " + itemGenerated); //Prints the hex value of firstCalc
+                                    }
+                                }
+                                if (Int32.Parse(encounterRate) == 4)
+                                {
+                                    if (itemGenerated == "Full Restore")
+                                    {
+                                        Console.WriteLine(repeated + ": 0x" + hexResult + " Item: " + itemGenerated); //Prints the hex value of firstCalc
+                                    }
+                                }
+                                if (Int32.Parse(encounterRate) == 3)
+                                {
+                                    if (itemGenerated == "Rare Candy")
+                                    {
+                                        Console.WriteLine(repeated + ": 0x" + hexResult + " Item: " + itemGenerated); //Prints the hex value of firstCalc
+                                    }
+                                }
+                                if (Int32.Parse(encounterRate) == 2)
+                                {
+                                    if (itemGenerated == "Ultra Ball")
+                                    {
+                                        Console.WriteLine(repeated + ": 0x" + hexResult + " Item: " + itemGenerated); //Prints the hex value of firstCalc
+                                    }
+                                }
+                                if (Int32.Parse(encounterRate) == 1)
+                                {
+                                    if (itemGenerated == "Full Heal")
+                                    {
+                                        Console.WriteLine(repeated + ": 0x" + hexResult + " Item: " + itemGenerated); //Prints the hex value of firstCalc
+                                    }
+                                }
+                                if (Int32.Parse(encounterRate) == 0)
+                                {
+                                    if (itemGenerated == "Super Potion")
+                                    {
+                                        Console.WriteLine(repeated + ": 0x" + hexResult + " Item: " + itemGenerated); //Prints the hex value of firstCalc
+                                    }
+                                }
                                 if (save)
                                 {
                                     File.AppendAllText(rngInitSeed + "data-encounters.txt", repeated + ": 0x" + hexResult + "\n");
